@@ -1,4 +1,4 @@
-module github.com/devopsfaith/krakend-jose
+module github.com/kristosiisusov/krakend/v1.3.1
 
 go 1.13
 
