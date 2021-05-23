@@ -38,7 +38,7 @@ func TokenSigner(hf ginlura.HandlerFactory, logger logging.Logger) ginlura.Handl
 		logger.Info("JOSE: signer enabled for the endpoint", cfg.Endpoint)
 
 		return func(c *gin.Context) {
-			proxyReq := ginlura.NewRequest(cfg.HeadersToPass)(c, cfg.QueryString)
+			proxyReq := ginlura.NewRequest(cfg)(c, cfg.QueryString)
 			ctx, cancel := context.WithTimeout(c, cfg.Timeout)
 			defer cancel()
 
